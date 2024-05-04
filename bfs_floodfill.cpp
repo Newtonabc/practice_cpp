@@ -11,18 +11,18 @@ int main(){
 	int n,m,st1,st2;
 	cin>>n >>m >>st1 >>st2;
 	q.push(make_pair(st1,st2));
+	visited[st1][st2]=true;
 	while(!q.empty()){
 		int x=q.front().first;
 		int y=q.front().second;
 		q.pop();
-		if(visited[x][y]) continue;
-		else visited[x][y]=true;
 		for(int i=0;i<4;i++){
 			int xa=x+a[i];
 			int yb=y+b[i];
 			if(xa<0 || xa>=n || yb<0 || yb>=m) continue;
 			if(visited[xa][yb]) continue;
 			q.push(make_pair(xa,yb));
+			visited[xa][yb]=true;
 		}
 	}
 }
