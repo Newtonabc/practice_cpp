@@ -50,6 +50,7 @@ int main(){
 		cin>>op >>a >>b;
 		a--,b--;
 		if(op=='u'){
+			b++;
 			update(1,a,b,0,n-1);
 		}
 		else{
