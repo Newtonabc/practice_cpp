@@ -3,6 +3,7 @@ using namespace std;
 const int N=1e3+10;
 vector<pair<int,int> > adj[N];
 int dist[N];
+bool vs[N];
 priority_queue<pair<int,int>,vector<pair<int,int> >,greater<pair<int,int> > > q;
 int main(){
 	int n,m;
@@ -19,6 +20,8 @@ int main(){
 	while(!q.empty()){
 		int u=q.top().second;
 		q.pop();
+		if(vs[u]) continue;
+		vs[u]=true;
 		for(int i=0;i<adj[u].size();i++){
 			int w=adj[u][i].first;
 			int v=adj[u][i].second;
