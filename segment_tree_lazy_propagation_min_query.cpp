@@ -23,8 +23,8 @@ void build(int l,int r,int idx){
 }
 
 void update(int l,int r,int idx,int a,int b,int val){
-	if(b<l || a>r) return;
 	pushlz(l,r,idx);
+	if(b<l || a>r) return;
 	if(a<=l && b>=r){
 		lz[idx]+=val;
 		pushlz(l,r,idx);
