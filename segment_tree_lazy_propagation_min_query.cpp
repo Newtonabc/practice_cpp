@@ -37,8 +37,8 @@ void update(int l,int r,int idx,int a,int b,int val){
 }
 
 int query(int l,int r,int idx,int a,int b){
-	pushlz(l,r,idx);
 	if(b<l || a>r) return INT_MAX;
+	pushlz(l,r,idx);
 	if(a<=l && b>=r) return s[idx];
 	int m=(l+r)/2;
 	return min(query(l,m,idx*2,a,b),query(m+1,r,idx*2+1,a,b));
