@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int N=5e5+10;
+const int N=2e5+10;
 int trie[N][30];
 bool word[N];
 int cnt;
