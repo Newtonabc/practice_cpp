@@ -4,6 +4,11 @@ struct node{
     int val,pri;
     node *l,*r;
 };
+node *init(int key){
+    node *tmp=new node;
+    *tmp={key,rand(),NULL,NULL};
+    return tmp;
+}
 void split(node *t,node *&l,node *&r,int k){
     if(!t){
         l=r=NULL;
